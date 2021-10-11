@@ -65,7 +65,7 @@ export default function Search({ className }: Props) {
               setTextFieldValue(event.target.value);
 
               const { data } = await axios.get(
-                "http://localhost:3001/autocomplete",
+                `${process.env.NEXT_PUBLIC_SERVER_DOMAIN}/autocomplete`,
                 {
                   params: {
                     q: event.target.value,
